@@ -3,9 +3,9 @@
 include ('koneksi.php');
 
 //get id
-$nuptk = $_GET['nuptk'];
+$nim = $_GET['nim'];
 
-$query = "DELETE FROM tbl_guru WHERE nuptk = '$nuptk'";
+$query = "DELETE FROM mahasiswa WHERE nim = '$nim'";
 
 if (mysqli_query($connection,$query)) {
     header("location: index.php");

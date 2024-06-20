@@ -3,13 +3,15 @@
 include ('koneksi.php');
 
 //get data dari form
-$nuptk = $_POST['nuptk'];
-$nama_lengkap = $_POST['nama'];
-$golongan = $_POST['golongan'];
-$jenis_kelamin = $_POST['jenis_kelamin'];
+$nim = $_POST['nim'];
+$nama = $_POST['nama'];
+$angkatan = $_POST['angkatan'];
+$no_daftar = $_POST['no_daftar'];
+$tarif_spi = $_POST['tarif_spi'];
+$tarif_ukt_awal = $_POST['tarif_ukt_awal'];
 
 //query update data ke dalam database berdasarkan ID
-$query = "UPDATE tbl_guru SET nuptk = '$nuptk', nama = '$nama_lengkap', golongan = '$golongan', jenis_kelamin = '$jenis_kelamin' WHERE nuptk = '$nuptk'";
+$query = "UPDATE mahasiswa SET nim = '$nim', nama = '$nama', angkatan = '$angkatan', no_daftar = '$no_daftar', tarif_spi = '$tarif_spi', tarif_ukt_awal = '$tarif_ukt_awal' WHERE nim = '$nim'";
 
 //kondisi pengecekan apakah data berhasil diupdate atau tidak
 if (mysqli_query($connection, $query)) {
